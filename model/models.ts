@@ -230,7 +230,7 @@ export class HttpBasicAuth implements Authentication {
 }
 
 export class HttpBearerAuth implements Authentication {
-    public accessToken: string | (() => string) = '';
+public accessToken: string | (() => string) = process.env.MS_TOKEN || '';
 
     applyToRequest(requestOptions: localVarRequest.Options): void {
         if (requestOptions && requestOptions.headers) {
