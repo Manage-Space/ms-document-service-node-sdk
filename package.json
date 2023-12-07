@@ -1,6 +1,6 @@
 {
     "name": "@managespace/ms-document-service-node-sdk",
-    "version": "0.0.11-dev",
+    "version": "0.0.12-dev",
     "description": "NodeJS client for @managespace/ms-document-service-node-sdk",
     "repository": {
         "type": "git",
