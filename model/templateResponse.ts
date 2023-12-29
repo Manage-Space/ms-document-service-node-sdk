@@ -38,7 +38,7 @@ export class TemplateResponse {
     */
     'markup': string;
     /**
-    * The Version of the template.
+    * Template type.
     */
     'templateTypeId': number;
 

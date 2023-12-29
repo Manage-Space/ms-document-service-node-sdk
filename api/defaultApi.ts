@@ -22,7 +22,6 @@ import { CreateDocumentSignature200Response } from '../model/createDocumentSigna
 import { CreateDocumentSignatureRequest } from '../model/createDocumentSignatureRequest';
 import { CreateTemplateRequest } from '../model/createTemplateRequest';
 import { ForbiddenError403Response } from '../model/forbiddenError403Response';
-import { GetTemplate200Response } from '../model/getTemplate200Response';
 import { GetTemplates200Response } from '../model/getTemplates200Response';
 import { InternalServerError500Response } from '../model/internalServerError500Response';
 import { TemplateResponse } from '../model/templateResponse';
@@ -625,7 +624,7 @@ export class DefaultApi {
      * @param orgId The Organization ID
      * @param templateId The Organization ID
      */
-    public async getTemplate (orgId: string, templateId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetTemplate200Response;  }> {
+    public async getTemplate (orgId: string, templateId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }> {
         const localVarPath = this.basePath + '/document/orgs/{orgId}/templates/{templateId}'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)))
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
@@ -682,13 +681,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetTemplate200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetTemplate200Response");
+                            body = ObjectSerializer.deserialize(body, "GetTemplates200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -787,7 +786,7 @@ export class DefaultApi {
      * @param templateId The Organization ID
      * @param updateTemplateRequest 
      */
-    public async updateTemplate (orgId: string, templateId: string, updateTemplateRequest: UpdateTemplateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetTemplate200Response;  }> {
+    public async updateTemplate (orgId: string, templateId: string, updateTemplateRequest: UpdateTemplateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }> {
         const localVarPath = this.basePath + '/document/orgs/{orgId}/templates/{templateId}'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)))
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
@@ -850,13 +849,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: GetTemplate200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "GetTemplate200Response");
+                            body = ObjectSerializer.deserialize(body, "GetTemplates200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

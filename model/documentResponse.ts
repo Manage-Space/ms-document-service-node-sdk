@@ -41,7 +41,7 @@ export class DocumentResponse {
     /**
     * Expires At
     */
-    'expiresAt'?: Date;
+    'expiresAt': Date | null;
     /**
     * Template type
     */

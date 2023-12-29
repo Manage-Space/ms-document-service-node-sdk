@@ -16,9 +16,7 @@ model/documentSignatureResponse.ts
 model/documentValue.ts
 model/forbiddenError403Response.ts
 model/forbiddenError403ResponseError.ts
-model/getTemplate200Response.ts
 model/getTemplates200Response.ts
-model/getTemplates200ResponseDataInner.ts
 model/internalServerError500Response.ts
 model/internalServerError500ResponseError.ts
 model/models.ts

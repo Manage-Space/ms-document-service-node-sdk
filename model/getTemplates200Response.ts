@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { GetTemplates200ResponseDataInner } from './getTemplates200ResponseDataInner';
+import { TemplateResponse } from './templateResponse';
 
 export class GetTemplates200Response {
-    'data'?: Array<GetTemplates200ResponseDataInner>;
+    'data'?: Array<TemplateResponse>;
     'success'?: boolean;
     'error'?: object;
 
@@ -24,7 +24,7 @@ export class GetTemplates200Response {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<GetTemplates200ResponseDataInner>"
+            "type": "Array<TemplateResponse>"
         },
         {
             "name": "success",

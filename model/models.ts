@@ -13,9 +13,7 @@ export * from './documentSignatureResponse';
 export * from './documentValue';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
-export * from './getTemplate200Response';
 export * from './getTemplates200Response';
-export * from './getTemplates200ResponseDataInner';
 export * from './internalServerError500Response';
 export * from './internalServerError500ResponseError';
 export * from './templateResponse';
@@ -49,9 +47,7 @@ import { DocumentSignatureResponse } from './documentSignatureResponse';
 import { DocumentValue } from './documentValue';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
-import { GetTemplate200Response } from './getTemplate200Response';
 import { GetTemplates200Response } from './getTemplates200Response';
-import { GetTemplates200ResponseDataInner } from './getTemplates200ResponseDataInner';
 import { InternalServerError500Response } from './internalServerError500Response';
 import { InternalServerError500ResponseError } from './internalServerError500ResponseError';
 import { TemplateResponse } from './templateResponse';
@@ -89,9 +85,7 @@ let typeMap: {[index: string]: any} = {
     "DocumentValue": DocumentValue,
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
-    "GetTemplate200Response": GetTemplate200Response,
     "GetTemplates200Response": GetTemplates200Response,
-    "GetTemplates200ResponseDataInner": GetTemplates200ResponseDataInner,
     "InternalServerError500Response": InternalServerError500Response,
     "InternalServerError500ResponseError": InternalServerError500ResponseError,
     "TemplateResponse": TemplateResponse,
