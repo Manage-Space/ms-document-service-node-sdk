@@ -24,7 +24,6 @@ import { CreateTemplateRequest } from '../model/createTemplateRequest';
 import { ForbiddenError403Response } from '../model/forbiddenError403Response';
 import { GetTemplates200Response } from '../model/getTemplates200Response';
 import { InternalServerError500Response } from '../model/internalServerError500Response';
-import { TemplateResponse } from '../model/templateResponse';
 import { UnauthorizedError401Response } from '../model/unauthorizedError401Response';
 import { UpdateTemplateRequest } from '../model/updateTemplateRequest';
 
@@ -374,12 +373,12 @@ export class DefaultApi {
      * @param orgId The Organization ID
      * @param createTemplateRequest 
      */
-    public async createTemplate (orgId: string, createTemplateRequest: CreateTemplateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TemplateResponse;  }> {
+    public async createTemplate (orgId: string, createTemplateRequest: CreateTemplateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }> {
         const localVarPath = this.basePath + '/document/orgs/{orgId}/templates'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json', 'application/json;v=1'];
+        const produces = ['application/json;v=1'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -431,13 +430,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TemplateResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetTemplates200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TemplateResponse");
+                            body = ObjectSerializer.deserialize(body, "GetTemplates200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
